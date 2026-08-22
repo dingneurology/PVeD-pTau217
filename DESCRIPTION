@@ -1,0 +1,19 @@
+Package: PVeDptau217Analysis
+Title: R-first reproducible analysis code for PVeD and plasma pTau217
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Project", family = "Team", role = c("aut", "cre"), email = "replace-with-corresponding-author@example.org")
+  )
+Description: Reproducible R analysis scripts for testing whether MRI-derived
+    periventricular diffusion modifies associations of plasma pTau217 with
+    Alzheimer disease PET biomarkers and longitudinal cognition.
+License: BSD_3_clause + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.2)
+Imports:
+    yaml,
+    ggplot2,
+    lme4
+Suggests:
+    testthat
