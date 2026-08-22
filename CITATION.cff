@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated article and this software."
+title: "Periventricular diffusivity modifies plasma pTau217 associations with brain pathology"
+type: software
+version: 0.2.0
+date-released: 2026-08-22
+authors:
+  - name: "Bao R, Zhang S, He H, Cheng W, Zhang T, Ding W, and collaborators"
+license: BSD-3-Clause
