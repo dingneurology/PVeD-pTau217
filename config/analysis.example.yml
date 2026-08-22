@@ -1,0 +1,108 @@
+project:
+  random_seed: 217
+  minimum_complete_n: 30
+  robust_covariance: HC3
+  max_condition_number: 1000000
+
+paths:
+  adni_model_ready: data/raw/adni_model_ready.csv
+  habs_index: data/raw/habs_pved_index.csv
+  habs_ptau: data/raw/habs_ptau_long.csv
+  habs_amyloid_pet: data/raw/habs_amyloid_pet_long.csv
+  habs_tau_pet: data/raw/habs_tau_pet_long.csv
+  habs_covariates: data/raw/habs_covariates.csv
+  habs_cognition: data/raw/habs_cognition_long.csv
+  adni_cognition: data/raw/adni_cognition_long.csv
+  habs_all_available: data/derived/habs_all_available.csv
+  habs_time_aligned: data/derived/habs_time_aligned_24m.csv
+  aggregate_results: results
+
+columns:
+  participant_id: participant_id
+  pved: pved
+  pved_scan_date: pved_scan_date
+  measurement_date: measurement_date
+  cognition_visit_date: visit_date
+  cognition_outcome: pacc_like
+  adni_cognition_outcome: mpacc_trailsb
+  age: age
+  sex: sex
+  education: education
+  apoe4: apoe4
+  adni_ptau: ptau217
+  habs_ptau_primary: ptau217_primary
+  habs_ptau_alternative: ptau217_alternative
+
+time_matching:
+  primary_window_months: null
+  sensitivity_window_months: 24
+  tie_break: earlier
+
+models:
+  categorical_covariates: [sex, apoe4]
+  adni:
+    primary_covariates: [age, sex, education]
+    sensitivity_covariates:
+      apoe4_adjusted: [age, sex, education, apoe4]
+  habs:
+    primary_covariates: [age, sex, apoe4]
+    sensitivity_covariates: {}
+  adni_outcomes:
+    amyloid_centiloid:
+      label: Amyloid PET Centiloid
+      family: amyloid
+    amyloid_suvr:
+      label: Amyloid PET SUVR
+      family: amyloid
+    tau_meta:
+      label: Tau PET meta-temporal SUVR
+      family: tau_primary
+    tau_entorhinal:
+      label: Tau PET entorhinal SUVR
+      family: tau_regional
+    tau_inferior_temporal:
+      label: Tau PET inferior temporal SUVR
+      family: tau_regional
+    tau_middle_temporal:
+      label: Tau PET middle temporal SUVR
+      family: tau_regional
+    tau_fusiform:
+      label: Tau PET fusiform SUVR
+      family: tau_regional
+    tau_precuneus:
+      label: Tau PET precuneus SUVR
+      family: tau_regional
+    tau_posterior_cingulate:
+      label: Tau PET posterior cingulate SUVR
+      family: tau_regional
+    hippocampal_volume:
+      label: Hippocampal volume
+      family: mri_specificity
+    wmh:
+      label: White matter hyperintensity
+      family: mri_specificity
+    pacc:
+      label: Baseline PACC
+      family: cognition
+  habs_outcomes:
+    amyloid_centiloid:
+      label: FBB amyloid Centiloid
+      family: amyloid
+    amyloid_suvr:
+      label: FBB global amyloid SUVR
+      family: amyloid
+    tau_medial_temporal:
+      label: PI2620 medial temporal tau SUVR
+      family: tau
+    tau_posterior_cingulate:
+      label: PI2620 posterior cingulate tau SUVR
+      family: tau
+    tau_lateral_parietal:
+      label: PI2620 lateral parietal tau SUVR
+      family: tau
+
+cognition:
+  require_post_index: true
+  minimum_visits: 2
+  primary_covariates: [age, sex, education]
+  sensitivity_covariates: [age, sex, education, apoe4]
