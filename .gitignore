@@ -1,0 +1,21 @@
+# Controlled cohort data and participant-level derivatives
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+data/derived/*
+!data/derived/.gitkeep
+!data/derived/README.md
+
+# Local analysis configuration and generated outputs
+config/analysis.yml
+results/*
+!results/README.md
+figures/*
+!figures/README.md
+
+# Local environments and operating-system files
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.textClipping
