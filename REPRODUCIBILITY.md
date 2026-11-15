@@ -1,3 +1,18 @@
+# Reproducibility: resubmission update, 15 November 2026
+
+The current uploaded resubmission workflow is documented in [README.md](README.md) and indexed at [revision_analyses/](revision_analyses/).
+Its Python entry point is `python run_all.py`; R figure scripts are run with `Rscript figures/R/make_figures.R`.
+Inputs, environment variables, dependencies and table/figure mappings are listed in the root README.
+No controlled cohort inputs or generated participant-level derivatives are included in this upload.
+
+The upload was checked for Python and R syntax and for the absence of input datasets. It was not an independent end-to-end reproduction of manuscript estimates.
+
+---
+
+## Historical documentation: earlier R-first implementation
+
+The following instructions document the previous implementation and are retained for provenance. They are not the execution instructions for the newly uploaded resubmission workflow.
+
 # Reproducibility
 
 ## 1. Environment

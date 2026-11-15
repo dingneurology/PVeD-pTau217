@@ -1,3 +1,18 @@
+# Code update: 15 November 2026
+
+Added the author-supplied `PVeD-pTau217_github.zip` resubmission code to the existing repository.
+
+- New Python analysis and figure entry points, path configuration, dependencies and an R figure script.
+- Root README describes the uploaded workflow; `revision_analyses/` provides the path referenced in the submitted supplement.
+- Previous source files and commit history are retained.
+- No controlled input datasets, model-ready participant files or generated analysis outputs are uploaded.
+- Source ZIP SHA-256: `61da6c38156dacbc4a16931ba518ec51e49265751c9988f477ed03bc27d5c20d`.
+- Validation scope: syntax checks only; numeric manuscript results were not independently regenerated as part of this upload.
+
+## Historical release-candidate notes
+
+The notes below describe the earlier implementation and its release status at that time.
+
 # Release-candidate notes
 
 This package is structurally ready for GitHub review but should not be tagged as

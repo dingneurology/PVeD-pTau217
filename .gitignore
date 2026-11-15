@@ -1,21 +1,26 @@
-# Controlled cohort data and participant-level derivatives
-data/raw/*
-!data/raw/.gitkeep
-!data/raw/README.md
-data/derived/*
-!data/derived/.gitkeep
-!data/derived/README.md
+# Participant-level data must not be committed (ADNI and HABS-HD data use agreements)
+data/
+work/
+results/
+figures/R/source_data/
+figures/output/
+figures/R/output/
+*.pkl
+*.xlsx
+*.csv
+!docs/*.csv
 
-# Local analysis configuration and generated outputs
-config/analysis.yml
-results/*
-!results/README.md
-figures/*
-!figures/README.md
-
-# Local environments and operating-system files
-.venv/
+# R / Python / OS
+.Rhistory
+.RData
+.Rproj.user/
 __pycache__/
-*.py[cod]
+*.pyc
+.ipynb_checkpoints/
 .DS_Store
+Thumbs.db
+
+# Existing repository local settings
+config/analysis.yml
+.venv/
 *.textClipping

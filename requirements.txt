@@ -1,0 +1,6 @@
+# Python 3.12+ (tested with 3.13)
+numpy>=2.0        # tested 2.5.3
+pandas>=2.2       # tested 3.0.5
+scipy>=1.13       # tested 1.18.1
+matplotlib>=3.8   # tested 3.11.2
+openpyxl>=3.1     # tested 3.1.5 (reading HABS-HD .xlsx releases)
